@@ -1,5 +1,5 @@
 Medical Report Analyzer
-Project Report
+Project
 
 What this project is
 Medical Report Analyzer is a dashboard-style app that helps someone keep track of their medical reports — blood tests, X-rays, MRIs, ECGs — in one place instead of digging through paper files or random PDFs every time. A user uploads a report along with basic patient details, and the app is meant to show a clean summary of the important numbers (blood pressure, sugar level, heart rate, oxygen level) and keep a history of everything that was uploaded before.
