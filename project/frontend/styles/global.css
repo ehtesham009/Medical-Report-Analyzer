@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    transition:
+        background-color .35s ease,
+        color .35s ease;
+}
+
+/* =====================================================
+   LIGHT THEME
+===================================================== */
+
+:root{
+
+    --bg:#F4F7FC;
+
+    --card:#FFFFFF;
+
+    --card-hover:#F8FAFC;
+
+    --text:#1E293B;
+
+    --text-light:#64748B;
+
+    --border:#E2E8F0;
+
+    --input:#FFFFFF;
+
+    --navbar:rgba(255,255,255,.90);
+
+    --sidebar:#1E3A8A;
+
+    --sidebar-hover:#2563EB;
+
+    --table:#FFFFFF;
+
+    --primary:#2563EB;
+
+    --success:#22C55E;
+
+    --warning:#F59E0B;
+
+    --danger:#EF4444;
+
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/* =====================================================
+   DARK THEME
+===================================================== */
+
+body.dark{
+
+    --bg:#0F172A;
+
+    --card:#1E293B;
+
+    --card-hover:#334155;
+
+    --text:#F8FAFC;
+
+    --text-light:#CBD5E1;
+
+    --border:#475569;
+
+    --input:#334155;
+
+    --navbar:#1E293B;
+
+    --sidebar:#111827;
+
+    --sidebar-hover:#2563EB;
+
+    --table:#1E293B;
+
+    --primary:#3B82F6;
+
+    --success:#22C55E;
+
+    --warning:#F59E0B;
+
+    --danger:#EF4444;
+
+    --shadow:0 10px 25px rgba(0,0,0,.45);
+
+}
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+}
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    border:1px solid var(--border);
+
+    background:var(--input);
+
+    color:var(--text);
+
+    border-radius:12px;
+
+    padding:12px 15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    color:var(--text-light);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:var(--table);
+
+}
+
+th,
+td{
+
+    padding:15px;
+
+    border-bottom:1px solid var(--border);
+
+    color:var(--text);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    color:var(--text);
+
+}
+
+p,
+span,
+label{
+
+    color:var(--text-light);
+
+}
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+
+.container{
+
+    display:flex;
+
+}
+
+.content{
+
+    flex:1;
+
+    padding:30px;
+
+    margin-top:70px;
+
+    margin-left:250px;
+
+    background:var(--bg);
+
+    min-height:100vh;
+
+    transition:.3s;
+
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card,
+.stat-card,
+.reports,
+.overview,
+.activity,
+.appointments,
+.feature,
+.upload-card,
+.analysis-card,
+.profile-card,
+.table-card,
+.auth-card,
+.welcome{
+
+    background:var(--card);
+
+    color:var(--text);
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.card:hover,
+.stat-card:hover,
+.upload-card:hover,
+.analysis-card:hover{
+
+    background:var(--card-hover);
+
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.primary-btn{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.success{
+
+    background:var(--success);
+
+    color:white;
+
+}
+
+.warning{
+
+    background:var(--warning);
+
+    color:white;
+
+}
+
+.danger{
+
+    background:var(--danger);
+
+    color:white;
+
+}
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.completed{
+
+    background:var(--success);
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+.pending{
+
+    background:var(--warning);
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+.critical{
+
+    background:var(--danger);
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    background:var(--navbar);
+
+    backdrop-filter:blur(15px);
+
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar{
+
+    background:var(--sidebar);
+
+}
+
+.sidebar a{
+
+    color:white;
+
+}
+
+.sidebar a:hover{
+
+    background:var(--sidebar-hover);
+
+}
+
+.sidebar .router-link-active{
+
+    background:var(--sidebar-hover);
+
+}
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box{
+
+    background:var(--input);
+
+}
+
+.search-box input{
+
+    background:transparent;
+
+    border:none;
+
+}
+
+.search-box i{
+
+    color:var(--text-light);
+
+}
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile h4{
+
+    color:var(--text);
+
+}
+
+.profile p{
+
+    color:var(--text-light);
+
+}
+
+/* =====================================================
+   NOTIFICATION
+===================================================== */
+
+.notification{
+
+    color:var(--text);
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:var(--sidebar);
+
+    color:white;
+
+}
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--bg);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+*{
+
+    transition:
+        background-color .3s,
+        color .3s,
+        border-color .3s,
+        box-shadow .3s;
+
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+.content{
+
+    margin-left:0;
+
+    padding:20px;
+
+}
+
+.container{
+
+    flex-direction:column;
+
+}
+
+}
